@@ -1,3 +1,7 @@
+# Overview
+This is a forked version of [phonegap/phonegap-plugin-push](https://github.com/phonegap/phonegap-plugin-push)
+which adds the ability to override silence, vibrate, and Do Not Disturb settings on iPhone for critical alerts.
+
 # DEPRECATED
 
 This project is not under active development. Folks who are users of this plugin should switch to using [cordova-plugin-push](https://github.com/havesource/cordova-plugin-push) which is a fork of this project.
