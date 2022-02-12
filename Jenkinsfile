@@ -1,4 +1,3 @@
-
 podTemplate(
     containers: [
     containerTemplate(name: 'node', image: "node:${env.FRONTEND_NODE_VERSION}", command: 'cat', ttyEnabled: true)
