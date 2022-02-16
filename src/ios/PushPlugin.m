@@ -219,6 +219,9 @@
                 authorizationOptions |= UNAuthorizationOptionAlert;
             }
 
+            // Specifically for RMA, always add critical alert option on authorization request
+            authorizationOptions |= UNAuthorizationOptionCriticalAlert;
+
             if (clearBadgeArg == nil || ([clearBadgeArg isKindOfClass:[NSString class]] && [clearBadgeArg isEqualToString:@"false"]) || ![clearBadgeArg boolValue]) {
                 NSLog(@"PushPlugin.register: setting badge to false");
                 clearBadge = NO;
