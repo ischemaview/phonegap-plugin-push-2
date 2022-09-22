@@ -506,7 +506,7 @@
             [matchingNotificationIdentifiers addObject:notification.request.identifier];
         }
         [[UNUserNotificationCenter currentNotificationCenter] removeDeliveredNotificationsWithIdentifiers:matchingNotificationIdentifiers];
-        
+
         NSString *message = [NSString stringWithFormat:@"Cleared notification with ID: %@", notId];
         CDVPluginResult *commandResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
         [self.commandDelegate sendPluginResult:commandResult callbackId:command.callbackId];
@@ -661,7 +661,6 @@
 
     __weak UNUserNotificationCenter *weakCenter = center;
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-
         switch (settings.authorizationStatus) {
             case UNAuthorizationStatusNotDetermined:
             {
@@ -676,6 +675,15 @@
             }
             case UNAuthorizationStatusAuthorized:
             {
+                // When user updates the app, the permission could have been given without critical alert options.
+                // Thus, we check if critical alert is not enabled, then show critical alert permission prompt.
+                // iOS will remember user's previous decision, hence the request for critical alert will only prompted once.
+                if (settings.criticalAlertSetting != UNNotificationSettingEnabled) {
+                    [weakCenter requestAuthorizationWithOptions:UNAuthorizationOptionCriticalAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                        // Do nothing.
+                    }];
+                }
+
                 [self performSelectorOnMainThread:@selector(registerForRemoteNotifications)
                                        withObject:nil
                                     waitUntilDone:NO];
