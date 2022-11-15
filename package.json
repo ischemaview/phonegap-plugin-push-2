@@ -2,7 +2,7 @@
   "name": "ischemaview-phonegap-plugin-push",
   "description": "Register and receive push notifications. Forked to add functionality by iSchemaView",
   "types": "./types/index.d.ts",
-  "version": "3.1.0",
+  "version": "3.2.0-exported.1",
   "homepage": "https://github.com/ischemaview/cordova-plugin-background-download#readme",
   "repository": {
     "type": "git",
