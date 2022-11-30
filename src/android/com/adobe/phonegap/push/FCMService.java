@@ -53,8 +53,8 @@ public class FCMService extends FirebaseMessagingService implements PushConstant
 
   private static final String LOG_TAG = "Push_FCMService";
   private static HashMap<Integer, ArrayList<String>> messageMap = new HashMap<Integer, ArrayList<String>>();
-  private static int FLAG_MUTABLE = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? PendingIntent.FLAG_MUTABLE : 0;
-  private static int FLAG_IMMUTABLE = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? PendingIntent.FLAG_IMMUTABLE : 0;
+  private static int FLAG_MUTABLE = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? PendingIntent.FLAG_MUTABLE : 0;
+  private static int FLAG_IMMUTABLE = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? PendingIntent.FLAG_IMMUTABLE : 0;
 
   public void setNotification(int notId, String message) {
     ArrayList<String> messageList = messageMap.get(notId);
