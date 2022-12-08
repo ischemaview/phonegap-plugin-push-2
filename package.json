@@ -1,18 +1,18 @@
 {
-  "name": "ischemaview-phonegap-plugin-push",
+  "name": "ischemaview-phonegap-plugin-push-2",
   "description": "Register and receive push notifications. Forked to add functionality by iSchemaView",
   "types": "./types/index.d.ts",
   "version": "3.3.0-upandroid.0",
-  "homepage": "https://github.com/ischemaview/cordova-plugin-background-download#readme",
+  "homepage": "https://github.com/ischemaview/phonegap-plugin-push-2#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ischemaview/phonegap-plugin-push.git"
+    "url": "git://github.com/ischemaview/phonegap-plugin-push-2.git"
   },
   "bugs": {
-    "url": "https://github.com/ischemaview/phonegap-plugin-push/issues"
+    "url": "https://github.com/ischemaview/phonegap-plugin-push-2/issues"
   },
   "cordova": {
-    "id": "ischemaview-phonegap-plugin-push",
+    "id": "ischemaview-phonegap-plugin-push-2",
     "platforms": [
       "ios",
       "android",
