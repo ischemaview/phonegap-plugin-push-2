@@ -2,7 +2,7 @@
   "name": "ischemaview-phonegap-plugin-push-2",
   "description": "Register and receive push notifications. Forked to add functionality by iSchemaView",
   "types": "./types/index.d.ts",
-  "version": "3.3.0-upandroid.0",
+  "version": "3.3.0-upandroid.1",
   "homepage": "https://github.com/ischemaview/phonegap-plugin-push-2#readme",
   "repository": {
     "type": "git",
